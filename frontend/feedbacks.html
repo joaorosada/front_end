@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio 2Bim</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/R J B.png">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(function () {
+            $("#accordion").accordion();
+        });
+    </script>
+    <style>
+        #accordion-resizer {
+            padding: 10px;
+            width: 350px;
+            height: 220px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="navbar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="bdo.html" >BDO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="php.html" >PHP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javapoo.html" >Java</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="feedbacks.html">Feedbacks</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html" >Contato</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <h2>Comentários</h2>
+        <ul class="comment-container" id="comments"></ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var commentsList = document.getElementById('comments');
+
+            
+            addComment('Rodrigo', 'O trabalho em banco de dados foi excelente! A explicação prática facilitou a compreensão, especialmente ao usar MAMP,  As consultas SQL foram abordadas com clareza, e as animações jQuery adicionaram um toque dinâmico. Em resumo, uma experiência educativa e envolvente."');
+            addComment('Piedro', 'Sua interface intuitiva e ferramentas integradas fazem a codificação eficiente. O autocompletar e a detecção de erros em tempo real economizam tempo, enquanto a integração e sugestões inteligentes facilitam o desenvolvimento. Uma escolha excepcional para desenvolvedores Java!');
+            addComment('Palmirinha', 'O trabalho em PHP é excelente! Código organizado, lógica eficiente e uma interface impressionante. A escolha do PHP para o servidor foi acertada, proporcionando um desempenho suave.');
+
+            
+            function addComment(name, commentText) {
+                var comment = document.createElement('li');
+                comment.className = 'comment';
+
+                var avatar = document.createElement('img');
+                avatar.src = 'img/avatar.png'; // Substitua pelo caminho da imagem do avatar
+                avatar.alt = 'avatar';
+                comment.appendChild(avatar);
+
+                var commentContent = document.createElement('div');
+                commentContent.className = 'comment-content';
+                commentContent.innerHTML = '<strong>' + name + ':</strong> ' + commentText;
+                comment.appendChild(commentContent);
+
+                commentsList.appendChild(comment);
+            }
+        });
+    </script>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+        
+</body>
+
+</html>

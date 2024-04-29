@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio 2Bim</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/R J B.png">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="navbar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="bdo.html">BDO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="php.html">PHP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javapoo.html">Java</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="feedbacks.html">Feedbacks</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html">Contato</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="contato">
+        <section class="content">
+            <h2>
+                contato@PortifolioRJB.com<br>
+                Umuarama-PR<br>
+                telefone: (44)99908-7586<br>
+                desenvolvido por: <b>João Guilherme, Rafael F e Bacarin </b><br><br>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.8064669977894!2d-53.28367698541724!3d-23.754279874628974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f2d1e658459f85%3A0x7b81c993c8545f96!2sFaculdade%20ALFA%20Umuarama%20-%20UniALFA!5e0!3m2!1spt-PT!2sbr!4v1681261779609!5m2!1spt-PT!2sbr"
+                    width="80%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </h2>
+        </section>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label"> <b>Comentários </b></label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#submitButton").click(function () {
+                var name = $("#name").val();
+                var email = $("#email").val();
+                var phone = $("#phone").val();
+                var message = $("#message").val();
+
+                var userData = {
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    message: message
+                };
+
+                alert("Olá " + name + ", sua mensagem foi enviada com sucesso!");
+
+                $("#name, #email, #phone, #message").val("");
+            });
+        });
+    </script>
+</body>
+<footer>
+    <div class="p-3 text-primary-emphasis bg-success-subtle border border-primary-subtle rounded-3">
+        <section>
+            <h1>Fale Conosco</h1>
+            <form id="contactForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="name" placeholder="Digite seu Nome" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                        placeholder="Digite seu Email" required>
+                    <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Telefone</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Digite seu Telefone">
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label">Mensagem</label>
+                    <textarea class="form-control" id="message" placeholder="Deixe sua mensagem aqui"
+                        style="height: 100px" required></textarea>
+                </div>
+
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                    <label class="form-check-label" for="exampleCheck1">Concordo com os termos</label>
+                </div>
+
+                <button type="button" id="submitButton" class="btn btn-success">Enviar</button>
+            </form>
+        </section>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+
+</html>

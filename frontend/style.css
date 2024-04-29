@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+#navbar,
+.container-fluid {
+    background-color: #8db8f8;
+    line-height: 60px;
+    font-size: 20px;
+    transition: 0.5s;
+
+}
+
+.slideshow h1 {
+    padding: 25px;
+}
+
+ul.navbar-nav {
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 25px;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section1,
+.section2 {
+    background-color: #c6dcfc;
+}
+
+.section2 p {
+    margin: 15;
+}
+
+.bdo img {
+    width: 100%;
+}
+
+.bdo h2 {
+    padding: 15px;
+}
+
+.toggler {
+    width: 500px;
+    height: 200px;
+    position: relative;
+    max-width: 100%;
+}
+
+#button {
+    padding: .5em 1em;
+    text-decoration: none;
+    border-radius: 45px;
+    background: #000;
+}
+
+#effect {
+    width: 240px;
+    height: 170px;
+    padding: 0.4em;
+    position: relative;
+    background: #fff;
+}
+
+#effect h3 {
+    margin: 0;
+    padding: 0.4em;
+    text-align: center;
+    max-width: 100%;
+}
+
+#contato h2 {
+    padding: 15px;
+    line-height: 40px;
+}
+.mb-3{
+    text-align: center;
+}
+.java-section {
+    background-color: #fff; /* Cor de fundo para a seção Java */
+}
+
+.java-section img {
+    width: 100%;
+}
+.php-section {
+    background-color: #fff; /* Cor de fundo para a seção PHP */
+}
+
+.php-section img {
+    width: 100%;
+}
+#accordion-resizer {
+    padding: 10px;
+    width: 350px;
+    height: 220px;
+}
+
+.comment-container {
+    list-style-type: none;
+    padding: 0;
+}
+
+.comment {
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Ajuste a margem inferior conforme necessário */
+}
+
+.comment:hover {
+    transform: scale(1.03);
+}
+
+.comment img {
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.comment-content {
+    flex: 1;
+}
